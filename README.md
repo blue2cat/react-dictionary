@@ -1,4 +1,5 @@
 # React Dictionary
+[![Continuous Integration](https://github.com/blue2cat/react-dictionary/actions/workflows/ci.yml/badge.svg)](https://github.com/blue2cat/react-dictionary/actions/workflows/ci.yml)
 
 Author: Gavin S.
 
