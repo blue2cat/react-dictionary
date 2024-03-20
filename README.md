@@ -1,9 +1,10 @@
-# Project 1
+# React Dictionary
 
-Your name(s): Gavin Stuart
+Author: Gavin S.
 
-
-
+## Features
+1. Dark/Light Mode
+2. Font Selection
 
 ## Design
 Dark Mode:
