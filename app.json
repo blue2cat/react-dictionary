@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "gs-dictionary",
+    "slug": "gs-dictionary",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/favicon-32x32.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
