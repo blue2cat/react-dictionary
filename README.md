@@ -8,8 +8,5 @@ Author: Gavin S.
 2. Font Selection
 
 ## Design
-Dark Mode:
 ![](./design/app_dark.png)
-
-Light Mode:
 ![](./design/app_light.png)
