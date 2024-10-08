@@ -9,7 +9,7 @@ Author: Gavin S.
 
 ## Design
 Dark Mode:
-![](./design/image1.png)
+![](./design/app_dark.png)
 
 Light Mode:
-![](./design/image2.png)
+![](./design/app_light.png)
