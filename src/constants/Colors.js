@@ -1,5 +1,6 @@
 export const white = '#fff';
 
+// Color themes for the app (light and dark)
 const Themes = {
   light: {
     text: '#2b3442',

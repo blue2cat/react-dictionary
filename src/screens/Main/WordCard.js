@@ -8,6 +8,7 @@ import Sources from "./Sources";
 const WordCard = ({ word, error, loading }) => {
   const { colors } = useThemeColors();
 
+  // If the word is loading, show a loading message
   if (loading)
     return (
       <ViewContrast
@@ -20,6 +21,7 @@ const WordCard = ({ word, error, loading }) => {
       </ViewContrast>
     );
 
+  // If the word is not found, show a 404 message
   if (word == "404") {
     return (
       <ViewContrast
@@ -46,6 +48,7 @@ const WordCard = ({ word, error, loading }) => {
     );
   }
 
+  // If there is an error, show the error message
   if (error)
     return (
       <ViewContrast

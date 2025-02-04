@@ -1,5 +1,6 @@
 import { SafeAreaView, StatusBar } from 'components/themed';
 
+// Root layout component
 const Main = ({children}) => {
   return (
     <>

@@ -4,6 +4,7 @@ import { StyleSheet, FlatList } from "react-native";
 import { useThemeColors } from "hooks/useThemeColors";
 import { Text } from "components/themed";
 
+// Display a word's definition details
 const WordDef = (word) => {
   if (!word) return null;
   const { colors } = useThemeColors();

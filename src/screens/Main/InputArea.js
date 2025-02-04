@@ -21,13 +21,13 @@ const InputArea = ({
     searchWord(word);
   }, []);
 
-  // function to search for a word in the dictionary backend
+  // Function to search for a word in the dictionary backend
   const searchWord = async (word) => {
-    // set loading to true and error to null
+    // Set loading to true and error to null for each search
     setLoading(true);
     setError(null);
 
-    // make a request to the dictionary api in async mode
+    // Make a request to the dictionary api in async mode
     try {
       const response = await axios
         .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
@@ -37,7 +37,7 @@ const InputArea = ({
           }
         });
 
-      // catch 404 error
+      // Catch 404 error
       if (response) {
         setServerResponse(response.data);
       }
@@ -46,11 +46,11 @@ const InputArea = ({
       setError("Word not found!");
     }
 
-    // set loading to false
+    // Set loading to false
     setLoading(false);
   };
 
-  // function to handle the submit event
+  // Handle the submit button press
   const handleSubmit = () => {
     if (word.trim().length > 0) {
       searchWord(word);
@@ -86,7 +86,11 @@ const InputArea = ({
             onBlur={() => setIsFocused(false)}
             cursorColor={colors.highlight}
           />
-          <TouchableOpacity onPress={handleSubmit} style={styles.searchIcon} testID="test-search-button">
+          <TouchableOpacity
+            onPress={handleSubmit}
+            style={styles.searchIcon}
+            testID="test-search-button"
+          >
             <Search />
           </TouchableOpacity>
         </View>
@@ -95,6 +99,7 @@ const InputArea = ({
   );
 };
 
+// Local spacing styles for the InputArea component
 const styles = StyleSheet.create({
   inputArea: {
     flexDirection: "row",

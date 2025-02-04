@@ -9,16 +9,17 @@ import HalfMoon from "components/svgr/HalfMoon";
 import Logo from "components/svgr/Logo";
 
 const Header = ({ user, addUser, style, ...rest }) => {
-  // contexts
+  // Contexts
   const { theme, setTheme } = useCustomTheme();
   const { colors } = useThemeColors();
   const { font, setFont, fontList } = useCustomFonts();
 
+  // Handle font change when dropdown is selected
   const handleFontChange = (font) => {
     setFont(font);
   };
 
-  // data for the font dropdown
+  // Data for the font dropdown
   const data = fontList.map((font) => {
     return { label: font, value: font };
   });
@@ -26,14 +27,10 @@ const Header = ({ user, addUser, style, ...rest }) => {
   return (
     <View style={[styles.header, style]} {...rest} testID="test-header">
       <Logo />
-
       <View style={styles.rightContainer}>
         <Dropdown
           mode="auto"
-          style={[
-            styles.dropdown,
-            { backgroundColor: colors.background },
-          ]}
+          style={[styles.dropdown, { backgroundColor: colors.background }]}
           itemTextStyle={{ color: colors.text }}
           iconColor={colors.highlight}
           activeColor={colors.background}
@@ -58,21 +55,16 @@ const Header = ({ user, addUser, style, ...rest }) => {
           }}
           testID="test-font-dropdown"
         />
-
         <View style={styles.verticalLine}></View>
-
         <View style={styles.themeBox}>
           <Switch
             value={theme === "dark"}
-            onValueChange={() =>
-              setTheme(theme === "dark" ? "light" : "dark")
-            }
+            onValueChange={() => setTheme(theme === "dark" ? "light" : "dark")}
             style={styles.switch}
             thumbColor={"white"}
             trackColor={{ true: colors.highlight, false: "gray" }}
             testID="test-theme-switch"
           />
-
           <HalfMoon color={colors.moon} />
         </View>
       </View>
@@ -80,6 +72,7 @@ const Header = ({ user, addUser, style, ...rest }) => {
   );
 };
 
+// Local spacing styles
 const styles = StyleSheet.create({
   header: {
     flexDirection: "row",

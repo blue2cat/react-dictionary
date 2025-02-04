@@ -28,6 +28,7 @@ const Sources = ({word}) => {
   );
 };
 
+// Local spacing styles for the Sources component
 const styles = StyleSheet.create({
   sourcesText: {
     marginTop: 15,

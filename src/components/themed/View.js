@@ -3,6 +3,8 @@ import { SafeAreaView as DefaultSafeAreaView } from "react-native-safe-area-cont
 import { useCustomTheme } from "hooks/useCustomTheme";
 import { useCustomFonts } from "hooks/useCustomFonts";
 
+
+// View components with custom theme and font
 export const ViewPlain = ({ ...rest }) => {
   return <DefaultView {...rest} />;
 };

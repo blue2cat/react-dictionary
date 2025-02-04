@@ -6,12 +6,13 @@ import Layout from "layouts/Main";
 import WordCard from "./WordCard";
 
 const Main = () => {
-  // set initial states
+  // Set initial states for first load
   const [word, setWord] = useState("keyboard");
   const [serverResponse, setServerResponse] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // Base app layout
   return (
     <Layout>
       <Header style={{ padding: 20 }} />

@@ -11,11 +11,12 @@ import Main from '../screens/Main/index';
 SplashScreen.preventAutoHideAsync();
 
 const RootNavigation = () => {
-  // state for the theme and fonts
+  // State for the theme and fonts
   const { colors } = useThemeColors();
   const { theme } = useCustomTheme();
   const { fonts } = useCustomFonts();
 
+  // Define the navigation theme
   const navigationTheme = {
     ...DefaultTheme,
     colors: {
@@ -28,13 +29,14 @@ const RootNavigation = () => {
     },
   };
 
+  // Load the custom fonts using the useFonts hook, wait for them to load
   const [isLoaded] = useFonts({
     "Sans Serif": require("../../assets/fonts/lora/Lora-VariableFont_wght.ttf"),
     "Serif": require("../../assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf"),
     "Mono": require("../../assets/fonts/inconsolata/Inconsolata-VariableFont_wdth,wght.ttf"),
   });
 
-  // wait for the theme and fonts to load before hiding the splash screen
+  // Wait for the theme and fonts to load before hiding the splash screen
   useEffect(() => {
     const fetchSetting = async () => {
       if (!theme.loading && isLoaded) {
@@ -44,7 +46,7 @@ const RootNavigation = () => {
     fetchSetting();
   }, [theme.loading, isLoaded]);
 
-  // if the theme or fonts are still loading, don't render anything
+  // If the theme or fonts are still loading, don't render anything
   if (theme.loading || !isLoaded) return null;
 
   return (

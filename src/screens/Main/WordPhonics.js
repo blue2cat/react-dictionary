@@ -6,17 +6,19 @@ import { useThemeColors } from "hooks/useThemeColors";
 import { useEffect } from "react";
 import PlayButton from "../../components/svgr/PlayButton";
 
+// Display a word's phonetic details
 const WordPhonics = ({ word }) => {
-  // state to store the sound object
+
+  // State to store the sound object
   const { colors } = useThemeColors();
   const [sound, setSound] = useState();
 
-  // get the audio uri if it exists
+  // Get the audio uri if it exists
   const getAudioUri = (word) => {
     return word[0].phonetics.find((phonetic) => phonetic.audio)?.audio || null;
   };
 
-  // function to play the sound
+  // Play the sound of the word
   async function playSound() {
     const uri = getAudioUri(word);
 
@@ -25,6 +27,7 @@ const WordPhonics = ({ word }) => {
     await sound.playAsync();
   }
 
+  // Unload the sound when the component is unmounted
   useEffect(() => {
     return sound
       ? () => {
@@ -61,6 +64,7 @@ const WordPhonics = ({ word }) => {
   );
 };
 
+// Local spacing styles for the WordPhonics component
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
