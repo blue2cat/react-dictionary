@@ -16,7 +16,7 @@
     ]
   },
   "dependencies": {
-    "@expo/html-elements": "^0.9.1",
+    "@expo/html-elements": "^0.11.2",
     "@expo/vector-icons": "^14.0.2",
     "@jsamr/react-native-li": "^2.3.1",
     "@react-native-async-storage/async-storage": "1.23.1",
